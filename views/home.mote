@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<title> To-do list </title>
+
+<body>
+
+<h1>To-do list</h1>
+
+<p>Got a new task? Here.</p>
+
+<form method="POST">
+	Add pending task: <input type="text" name="task"/>
+	<input type="submit" value="Add"/>
+</form>
+
+<p>Let's see what you have to do</p>
+
+% task_list.each do |task|
+	<ul>
+		<li> {{ task.description }} </li>
+	</ul>
+% end
+
+</body>
+</html>
