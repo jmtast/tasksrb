@@ -24,12 +24,12 @@ Cuba.define do
       res.write parsed.call( task_list: task_list)
     end
 
-  	on post do
+    on post do
       on param("task") do |task|
-    		new_task = Task.new(task)
+        new_task = Task.new(task)
         task_list.add(new_task)
         res.redirect "/"
       end
-  	end
+    end
   end
 end
