@@ -1,6 +1,6 @@
 # Tasks.rb
 
-Little personal project to get the hang out of two tools made by [soveran]("https://github.com/soveran"): [Cuba]("https://github.com/soveran/cuba") microframework for web development and [Mote]("https://github.com/soveran/mote") template engine.
+Little personal project to get the hang out of two tools made by [soveran](https://github.com/soveran): [Cuba](https://github.com/soveran/cuba) microframework for web development and [Mote](https://github.com/soveran/mote) template engine.
 
 ## Usage
 
@@ -15,4 +15,4 @@ It's simple so far. You fire up the server in the root of the project and access
 
 ### Special thanks
 
-To [Tonchis]("https://github.com/tonchis"), for all the support and patience with my, sometimes dumb, questions when I intend to steal all of his knowledge.
+To [Tonchis](https://github.com/tonchis), for all the support and patience with my, sometimes dumb, questions when I intend to steal all of his knowledge.
