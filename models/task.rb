@@ -7,7 +7,7 @@ class Task
   end
 
   def do_it
-  	@is_done = true
+    @is_done = true
   end
 
   def undo_it
@@ -22,13 +22,13 @@ class TaskList
     @tasks = Array.new
   end
 
-	def add(task)
+  def add(task)
     @tasks.push(task)
-	end
+  end
 
-	def do_it
-		self.do_it
-	end
+  def do_it
+    self.do_it
+  end
 
   def undo_it
     self.undo_it
@@ -37,5 +37,4 @@ class TaskList
   def each(&block)
     @tasks.each(&block)
   end
-
 end
