@@ -1,40 +1,28 @@
-class Task
-  attr_accessor :description, :is_done
+class Task < Ohm::Model
+  attribute :description
+  attribute :is_done
 
-  def initialize(description)
-    @description = description
-    @is_done = false
+  def set_description (description)
+    task.set "description", description
   end
 
   def do_it
-    @is_done = true
+    self.set "is_done", 1
   end
 
   def undo_it
-    @is_done = false
+    self.set "is_done", 0
   end
 end
 
-class TaskList
-  attr_accessor :tasks
-
-  def initialize
-    @tasks = Array.new
-  end
+class TaskList < Ohm::Model
+  list :tasks, Task
 
   def add(task)
-    @tasks.push(task)
-  end
-
-  def do_it
-    self.do_it
-  end
-
-  def undo_it
-    self.undo_it
+    self.tasks.push(task)
   end
 
   def each(&block)
-    @tasks.each(&block)
+    self.tasks.each(&block)
   end
 end
