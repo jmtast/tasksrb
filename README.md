@@ -1,6 +1,6 @@
 # Tasks.rb
 
-Little personal project to get the hang out of two tools made by [soveran](https://github.com/soveran): [Cuba](https://github.com/soveran/cuba) microframework for web development and [Mote](https://github.com/soveran/mote) template engine.
+Little personal project to get the hang out of three tools made by [soveran](https://github.com/soveran): [Cuba](https://github.com/soveran/cuba) microframework for web development, [Mote](https://github.com/soveran/mote) template engine and [Ohm](https://github.com/soveran/ohm) for Redis support and persistence.
 
 ## Usage
 
