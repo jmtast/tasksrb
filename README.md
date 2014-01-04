@@ -9,7 +9,7 @@ It's simple so far. You fire up the server in the root of the project and access
 ### Features
 
 - [X] List current task list
-- [ ] add a task to the current task list (with a simple redirect it just reloads the page. Have to add a little persistence, maybe?)
+- [X] add a task to the current task list
 - [ ] delete task from current task list
 - [ ] Differentiate done and undone tasks
 

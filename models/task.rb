@@ -17,7 +17,7 @@ end
 
 class TaskList < Ohm::Model
   list :tasks, Task
-
+  
   def add(task)
     self.tasks.push(task)
   end

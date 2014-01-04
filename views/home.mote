@@ -21,5 +21,7 @@
   </ul>
 % end
 
+<h3> <a href="cleandb"> Erase Tasks </a> </h3>
+
 </body>
 </html>
