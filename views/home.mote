@@ -17,7 +17,11 @@
 
 % task_list.each do |task|
   <ul>
-    <li> {{ task.description }} </li>
+    % if task.is_done == "0"
+	    <li> {{ task.description }} </li>
+	% else
+		<li> <strike> {{ task.description }} </strike> </li>
+	% end
   </ul>
 % end
 
