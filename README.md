@@ -10,7 +10,7 @@ It's simple so far. You fire up the server in the root of the project and access
 
 - [X] List current task list
 - [X] add a task to the current task list
-- [ ] delete task from current task list
+- [X] delete task from current task list
 - [ ] Differentiate done and undone tasks
 
 ### Special thanks

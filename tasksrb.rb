@@ -9,6 +9,10 @@ require_relative "./models/task"
 Cuba.use Rack::Session::Cookie,
   secret: "__a_very_long_string__"
 
+Cuba.use Rack::Static,
+  root: "public",
+  urls: ["/js", "/css", "/img"]
+
 Cuba.plugin Mote::Helpers
 Cuba.plugin Cuba::Render
 
@@ -46,11 +50,18 @@ Cuba.define do
       on param("task") do |task|
         new_task = Task.create(description: task, is_done: 0)
         new_task.save
-        task_list.add(new_task)
+        task_list.tasks.push(new_task)
         task_list.save
         res.redirect "/"
       end
     end
+  end
+
+  on delete, "tasks/:id" do |id|
+    task_list = TaskList.all.first
+    task_list.tasks.delete(Task[id])
+    task_list.save
+    res.redirect "/"
   end
 
   ## This block is the seed of the database. You can't use the app without a
