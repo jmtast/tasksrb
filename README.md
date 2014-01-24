@@ -9,9 +9,15 @@ It's simple so far. You fire up the server in the root of the project and access
 ### Features
 
 - [X] List current task list
-- [X] add a task to the current task list
-- [X] delete task from current task list
-- [ ] Differentiate done and undone tasks
+- [X] Add a task to the current task list
+- [X] Delete task from current task list
+- [X] Differentiate done and undone tasks
+- [ ] Have more than one task list
+- [ ] Multiple users and login support
+
+### Future work
+
+Check the issue tracker of this repository to see what I'm up to currently.
 
 ### Special thanks
 
