@@ -5,9 +5,9 @@ for (var i = 0; i < bullets.length; i++) {                                      
   var buttons = bullets[i].getElementsByTagName("a");                           // Gets the buttons of the li
   var delete_button = buttons[buttons.length-1];                                // Gets the delete button (depends on it being the first in the button list)
   var action_button = buttons[0];                                               // Gets the action button (depends on it being the first in the button list)
+  request = new XMLHttpRequest();                                               // Creates HTTP Request
   
   delete_button.addEventListener("click", function(event) {                     // Declares the behavior of the delete button when you click it
-    request = new XMLHttpRequest();                                             // Creates HTTP Request
     request.open(this.getAttribute("data-method"), this.getAttribute("href"));  // Opens the request, setting the method and the url
     var self = this;
     request.onreadystatechange = function () {              // Determines what is done when the readyState changes
@@ -20,9 +20,7 @@ for (var i = 0; i < bullets.length; i++) {                                      
   });
   
   action_button.addEventListener("click", function(event) { // Declares the behavior of the action button when you click it
-    request = new XMLHttpRequest();                         // Creates HTTP Request
     request.open("POST", this.getAttribute("href"));        // Opens the request, setting the method and the url
-    var self = this;
     request.onreadystatechange = function () {              // Determines what is done when the readyState changes
       if (this.readyState === 4 && this.status === 200) {
         window.location.reload();                           // Reloads entire page so that the task gets reloaded (strike or unstrike it), see if it can be improved
