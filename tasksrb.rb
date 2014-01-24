@@ -54,7 +54,22 @@ Cuba.define do
         task_list.save
         res.redirect "/"
       end
+
     end
+  end
+
+  on post, "tasks/do/:id" do |id|
+    task = Task[id]
+    task.do_it
+    task.save
+    res.redirect "/"
+  end
+
+  on post, "tasks/undo/:id" do |id|
+    task = Task[id]
+    task.undo_it
+    task.save
+    res.redirect "/"
   end
 
   on delete, "tasks/:id" do |id|

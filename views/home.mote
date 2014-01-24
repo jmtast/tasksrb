@@ -19,12 +19,14 @@
     % task_list.each do |task|
       % id = task.id
       <li>
-  	    % if task.is_done == "0"
+  	    % if task.done?
+          <span> <strike> {{ task.description }} </strike> </span>
+          <a href="/tasks/undo/{{id}}" data-action="Undo">Undo it</a>
+        % else
   		    <span> {{ task.description }} </span>
-    		% else
-    			<span> <strike> {{ task.description }} </strike> </span>
+          <a href="/tasks/do/{{id}}" data-action="Do">Do it</a>
     		% end
-        <a href="/tasks/{{id}}" data-method="DELETE">DELETE!!!!!!</a>
+        <a href="/tasks/{{id}}" data-method="DELETE">Delete task</a>
       </li>
     % end
 	</ul>

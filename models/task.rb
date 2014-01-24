@@ -7,11 +7,15 @@ class Task < Ohm::Model
   end
 
   def do_it
-    self.set "is_done", 1
+    self.is_done = 1
   end
 
   def undo_it
-    self.set "is_done", 0
+    self.is_done = 0
+  end
+
+  def done?
+    is_done == "1"
   end
 end
 
