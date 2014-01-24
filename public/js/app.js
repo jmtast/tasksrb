@@ -25,7 +25,7 @@ for (var i = 0; i < bullets.length; i++) {                                      
     var self = this;
     request.onreadystatechange = function () {              // Determines what is done when the readyState changes
       if (this.readyState === 4 && this.status === 200) {
-        window.location.reload();                           // Reloads entire page so that the task gets reloaded (strike or unstrike it)
+        window.location.reload();                           // Reloads entire page so that the task gets reloaded (strike or unstrike it), see if it can be improved
       }
     };
     request.send();                                         // Sends the request
